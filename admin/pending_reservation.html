@@ -77,8 +77,8 @@
                         <span>Contacts</span><span class="badge-warning ft-right">10+</span></a>
                         <ul class="sub-menu">
                            <li><a href="contacts.html">Inbox</a></li>
-                           <li><a href="mailbox-message.html">View Mail</a></li>
-                           <li><a href="mailbox-compose.html">Compose Mail</a></li>
+                           <li><a href="view_message.html">View Mail</a></li>
+                           <li><a href="create_message.php">Compose Mail</a></li>
                         </ul>
                      </li>
    
@@ -86,9 +86,9 @@
                         <a href="javascript:void(0)"><i class="fa fa-pie-chart"></i>
                         <span>Reservations</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
-                           <li><a href="chart-morris.html">Pending Reservations</a></li>
-                           <li><a href="chart-chartjs.html">Completed Reservations</a></li>
-                           <li><a href="chart-flot.html">Cancelled Reservations</a></li>
+                           <li><a href="pending_reservation.html">Pending Reservations</a></li>
+                           <li><a href="completed_reservations.html">Completed Reservations</a></li>
+                           <li><a href="canceled_reservation.html">Cancelled Reservations</a></li>
                         </ul>
                      </li>
                      <li class="menu-divider mg-y-20-force"></li>
@@ -317,57 +317,40 @@
                   <!--================================-->
                   <div class="row clearfix">
                    <div class="table-data">
-                           <div class="list-title">
-                    <h2>Pending Reservations</h2>
-                             
-                               </div>
-                   
                        <table border="1">
                    
                            <tr>
                    
                                <th>S.N</th>
-                               <th>Full Name</th>
-                               <th>Email Address</th>
-                               <th>City</th>
-                               <th>Country</th>
-                               <th>Edit</th>
-                               <th>Delete</th>
+                               <th>Destination</th>
+                               <th>Transfer Type</th>
+                               <th>From</th>
+                               <th>To</th>
+                               <th>Arrival Date</th>
+                               <th>Departure Date</th>
+                               <th>Adults</th>
+                               <th>Children</th>
+                               <th>Cancel</th>
+                               <th>Approve</th>
                    
                    
                            </tr>
                            
-                   <?php
                    
-                           if(count($fetchData)>0){
-                           $sn=1;
-                           foreach($fetchData as $data){
-                               
-                   ?> 
                    <tr>
                    <td><?php echo $sn; ?></td>
-                   <td><?php echo $data['full_name']; ?></td>
-                   <td><?php echo $data['email_address']; </td>
-                   <td><?php echo $data['city']; ?></td>
-                   <td><?php echo $data['country']; ?></td>
-                   <td><a href="update-form.php?edit=<?php echo $data['id']; ?>">Edit</a></td>
-                   <td><a href="delete-script.php?delete=<?php echo $data['id']; ?>">Delete</a></td>
-                   </tr> <?php
+                   <td><?php echo $data['destination']; ?></td>
+                   <td><?php echo $data['transfer_type']; </td>
+                   <td><?php echo $data['from_place']; ?></td>
+                   <td><?php echo $data['to_place']; ?></td>
+                   <td><?php echo $data['arrial_date']; ?></td>
+                   <td><?php echo $data['departure_date']; ?></td>
+                   <td><?php echo $data['adult']; ?></td>
+                   <td><?php echo $data['children']; ?></td>
+                   <td><a href="update-form.php?edit=<?php echo $data['id']; ?>">Cancel</a></td>
+                   <td><a href="delete-script.php?delete=<?php echo $data['id']; ?>">Approve</a></td>
+                   </tr>
                    
-                         $sn++; }
-                   
-                         }else{
-                               
-                   ?>
-                   
-                         <tr>
-                           <td colspan="7">No Data Found</td>
-                         </tr>
-                                   
-                   
-                       }
-                   ?>
-                    
                        </table>
                        
                   </div>

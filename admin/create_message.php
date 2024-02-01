@@ -22,6 +22,33 @@
       <link href="assets/css/style.css" rel="stylesheet"/>
       <!-- Favicon -->	
       <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <style>
+         table, td, th {  
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+        
+        table {
+          border-collapse: collapse;
+          max-width: 100%;
+         width:90%;
+    
+        }
+        .table-data{
+          
+          width:65%;
+          float: right;
+        }
+        th, td {
+          padding: 15px;
+        }
+    body{
+        overflow-x: hidden;
+    }
+    
+    * {
+      box-sizing: border-box;}
+    </style>
       
    </head>
    <body>
@@ -276,53 +303,47 @@
                   <!--================================-->
                   <div class="pageheader pd-y-25">
                      <div class="pd-t-5 pd-b-5">
-                        <h1 class="pd-0 mg-0 tx-20 text-overflow">Pending Reservations</h1>
-                     </div>
-                     <div class="breadcrumb pd-0 mg-0">
-                        <a class="breadcrumb-item" href="index.html"><i class="icon ion-ios-home-outline"></i> Home</a>
-                        <a class="breadcrumb-item" href="javascript:void(0)">Dashboard</a>
-                       
-                     </div>
-                  </div>
-                  <!--/ Breadcrumb End -->
-                  <!--================================-->
-                  <!-- Count Card Start -->
-                  <!--================================-->
+                        <h1 class="pd-0 mg-0 tx-20 text-overflow">Sending the Message</h1>
                   <div class="row clearfix">
-                    
+                   <div class="table-data">
+                           
+<form action="sending_message" method="POST">
+
+  <fieldset>
+
+
+    Full Name:<br>
+
+    <input type="text" name="full_name">
+
+    <br>
+
+    Email:<br>
+
+    <input type="email" name="email">
+
+    <br>
+
+    subject:<br>
+
+    <input type="text" name="subject">
+
+    <br>
+
+    Message:<br>
+
+    <input type="text" name="message" >
+
+    <br><br>
+
+    <input type="submit" name="submit" value="Send">
+
+  </fieldset>
+
+</form>
+
                   </div>
-                  <!--/ Statistic End -->	
-                  <div class="row clearfix">
-                     <div class="col-md-6 col-lg-12 col-xl-6">
-                        <!--================================-->
-                        <!-- Popular Products Start -->
-                       
-                        <!--/ Popular Products End -->
-                     </div>
-                     <div class="col-md-6 col-lg-12 col-xl-6">
-                        <!--================================-->
-                        <!-- Transaction History Start -->
-                       
-                        <!--/ Transaction History End -->
-                     </div>
-                  </div>
-                  <div class="row clearfix">
-                     <div class="col-md-4 col-lg-12 col-xl-4">
-                        <!--================================-->
-                        <!-- Support Tickets Start -->
-                       
-                        <!--/ Support Tickets End -->
-                     </div>
-                     <!--================================-->
-                     <!-- Recent Activity Start -->
-                     <!--================================-->
-                    
-                     <!--/ Recent Activity End -->
-                     <!--================================-->
-                     <!-- Friends  List Start -->
-                    
-                     <!--/ Friends  List End -->
-                  </div>
+                  
                   <!--================================-->
                   <!-- Social Activity 2 Start -->
                   <!--================================-->
