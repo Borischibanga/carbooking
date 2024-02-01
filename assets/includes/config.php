@@ -1,22 +1,10 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$db="car_booking";
-$password = "";
 
-// Create connection
-$conn = new mysqli($servername, $username, $db, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 <?php
 // Replace with your actual database credentials
-$servername = "your_servername";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "carbooking";
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -29,18 +17,14 @@ if ($conn->connect_error) {
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
-    $destination = $_POST["destination"];
-    $transfer_type = $_POST["transfer_type"];
-    $from_location = $_POST["from_place"];
-    $to_location = $_POST["to_place"];
-    $arrival_date = $_POST["arrival_date"];
-    $departure_date = $_POST["departure_date"];
-    $adult = $_POST["adult"];
-    $children = $_POST["children"];
+    $full_name = $_POST["full_name"];
+    $subject = $_POST["subject"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
     // Prepare and execute SQL statement
-    $sql = "INSERT INTO reservations (destination, transfer_type, from_place, to_place, arrival_date, departure_date, adult, children)
-            VALUES ('$destination', '$transfer_type', '$from_location', '$to_location', '$arrival_date', '$departure_date', $adult, $children)";
+    $sql = "INSERT INTO contactus (full_name, subject, email, message)
+            VALUES ('$full_name', '$subject', '$email', '$message')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Reservation successfully added!";

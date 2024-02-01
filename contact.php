@@ -234,7 +234,7 @@
                     <div class="wheel-contact-form text-center marg-lg-b145">
                         <form action="assets/includes/config.php" method="post">
                         <div class="form">
-                            <input type="text" name="fullname" placeholder="Your Name *">
+                            <input type="text" name="full_name" placeholder="Your Full Name *">
                             <input type="text" name="email" placeholder="Your Email *">
                             <input type="text" name="website" placeholder="Your URL (Optional)">
                             <input type="text" name="subject" placeholder="Subject*">
