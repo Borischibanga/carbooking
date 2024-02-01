@@ -176,7 +176,7 @@
                             <div class="clearfix">
                                 <div class="wheel-date">
                                     <span>From</span>
-                                    <select class="selectpicker">
+                                    <select name="from_place" class="selectpicker">
                                         <option>USA</option>
                                         <option>UA</option>
                                         <option>UK</option>
@@ -188,7 +188,7 @@
                                 </div>
                                 <div class="wheel-date ">
                                     <span>To</span>
-                                    <select class="selectpicker">
+                                    <select name="to_place" class="selectpicker">
                                         <option>USA</option>
                                         <option>UA</option>
                                         <option>UK</option>
@@ -213,7 +213,7 @@
                                 </div>
                                 <div class="wheel-date">
                                     <span>Adult</span>
-                                    <select class="selectpicker">
+                                    <select name="adult" class="selectpicker">
                                         <option>21</option>
                                         <option>22</option>
                                         <option>23</option>
@@ -228,7 +228,7 @@
                                 </div>
                                 <div class="wheel-date">
                                     <span>Children</span>
-                                    <select class="selectpicker">
+                                    <select name="children" class="selectpicker">
                                         <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
