@@ -116,8 +116,8 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item   ">
-                                        <a href="reservation1.html">Reservation</a>
+                                    <li class="menu-item ">
+                                        <a href="about.html">About Us</a>
                                     </li>
                                     <li class="menu-item menu-item-has-children  ">
                                         <a href="#">Pages</a>
@@ -139,13 +139,13 @@
                                         <a href="contact.html">Contact Us</a>
                                        
                                     </li>
-                                    <li class="menu-item ">
-                                        <a href="about.html">About Us</a>
+                                   
+                                    <li class="menu-item   ">
+                                        <a href="reservation1.html">My Reservation</a>
                                     </li>
                                 </ul>
                                 <div class="nav-menu-icon"><i></i></div>
                             </nav>
-                            <a href="http://goo.gl/rUdkZt" class="wheel-cheader-but" target="_blank">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -162,41 +162,57 @@
                     </header>
                 </div>
                 <div class="col-lg-6 col-lg-pull-6  padd-lr0">
+                   
                     <div class="wheel-start-form">
+                       
                         <form action="#">
-                            <label for="input-val11"><span>Dropping Off</span>
-                            <input type="text" id='input-val11' placeholder="ZIP, City, Airport or Address" required>
+                            <div> <h3><b>MAKE YOUR RESERVATION</b></h3></div>
+                            <label for="input-val11"><span>Destination</span>
+                            <input type="text" name="destination" id='input-val11' placeholder="ZIP, City, Airport or Address" required>
                             </label>
-                            <label for="input-val12"><span>Picking Up</span>
-                            <input type="text" id='input-val12' placeholder="ZIP, City, Airport or Address" required>
+                            <label for="input-val12"><span>Transfer Type</span>
+                            <input type="text" name="transfer_type" id='input-val12' placeholder="ZIP, City, Airport or Address" required>
                             </label>
                             <div class="clearfix">
                                 <div class="wheel-date">
-                                    <span>Pickup Date</span>
-                                    <label for="input-val13" class="fa fa-calendar">
-                                    <input  class="datetimepicker" id='input-val13' type="text" value="29 Apr">
-                                    </label>
+                                    <span>From</span>
+                                    <select class="selectpicker">
+                                        <option>USA</option>
+                                        <option>UA</option>
+                                        <option>UK</option>
+                                        <option>AU</option>
+                                        <option>LT</option>
+                                        <option>JP</option>
+                                        <option>IT</option>        
+                                    </select>
                                 </div>
                                 <div class="wheel-date ">
-                                    <span>Pickup time</span>
-                                    <label for="input-val14" class="fa fa-clock-o">
-                                    <input class="timepicker" id='input-val14' type="text" value="18:00">
-                                    </label>
+                                    <span>To</span>
+                                    <select class="selectpicker">
+                                        <option>USA</option>
+                                        <option>UA</option>
+                                        <option>UK</option>
+                                        <option>AU</option>
+                                        <option>LT</option>
+                                        <option>JP</option>
+                                        <option>IT</option>
+                                       
+                                    </select>
                                 </div>
                                 <div class="wheel-date">
-                                    <span>Return Date</span>
+                                    <span>Arrival Date</span>
                                     <label for="input-val15" class="fa fa-calendar">
-                                    <input  class="datetimepicker" id='input-val15' type="text" value="29 Apr">
+                                    <input  class="datetimepicker" name="arrival_date" id='input-val15' type="text" value="29 Jan">
                                     </label>
                                 </div>
                                 <div class="wheel-date">
-                                    <span>Return Time</span>
-                                    <label for="input-val16" class="fa fa-clock-o">
-                                    <input class="timepicker" id='input-val16' type="text" value="18:00">
+                                    <span>Departure Date</span>
+                                    <label for="input-val16" class="fa fa-calendar">
+                                    <input class="datetimepicker" name="departure_date" id='input-val16' type="text" value="29 Jan">
                                     </label>
                                 </div>
                                 <div class="wheel-date">
-                                    <span>Driver’s Age</span>
+                                    <span>Adult</span>
                                     <select class="selectpicker">
                                         <option>21</option>
                                         <option>22</option>
@@ -207,47 +223,24 @@
                                         <option>27</option>
                                         <option>28</option>
                                         <option>29</option>
-                                        <option>30</option>
-                                        <option>31</option>
-                                        <option>32</option>
-                                        <option>33</option>
-                                        <option>34</option>
-                                        <option>35</option>
-                                        <option>36</option>
-                                        <option>37</option>
-                                        <option>38</option>
-                                        <option>39</option>
-                                        <option>40</option>
-                                        <option>41</option>
-                                        <option>42</option>
-                                        <option>43</option>
-                                        <option>44</option>
-                                        <option>45</option>
-                                        <option>46</option>
-                                        <option>47</option>
-                                        <option>48</option>
-                                        <option>49</option>
-                                        <option>50</option>
+                                      
                                     </select>
                                 </div>
                                 <div class="wheel-date">
-                                    <span>Resident</span>
+                                    <span>Children</span>
                                     <select class="selectpicker">
-                                        <option>USA</option>
-                                        <option>UA</option>
-                                        <option>UK</option>
-                                        <option>AU</option>
-                                        <option>LT</option>
-                                        <option>JP</option>
-                                        <option>IT</option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
                                     </select>
                                 </div>
                             </div>
-                            <label for="input-val17" class="promo">
-                            <input type="text" id='input-val17' placeholder="Promo Code (Optional)">
-                            </label>
-                            <label for="input-val18" class="promo promo2">
-                            <button class="wheel-btn" id="input-val18">Search</button>
+                           
+                            <button class="wheel-btn" id="input-val18">Book Now</button>
                             </label>
                         </form>
                     </div>
@@ -261,7 +254,7 @@
                     <div class="col-xs-12">
                         <div class="wheel-header text-center marg-lg-t140 marg-lg-b340 marg-md-t140 marg-md-b140 marg-sm-t70 ">
                             <h5>the Biggest Online </h5>
-                            <h3>car <span>Rental</span>  Service</h3>
+                            <h3>car <span>Booking</span>  Service</h3>
                         </div>
                     </div>
                 </div>
