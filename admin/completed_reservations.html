@@ -22,6 +22,33 @@
       <link href="assets/css/style.css" rel="stylesheet"/>
       <!-- Favicon -->	
       <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <style>
+         table, td, th {  
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+        
+        table {
+          border-collapse: collapse;
+          max-width: 100%;
+         width:90%;
+    
+        }
+        .table-data{
+          
+          width:65%;
+          float: right;
+        }
+        th, td {
+          padding: 15px;
+        }
+    body{
+        overflow-x: hidden;
+    }
+    
+    * {
+      box-sizing: border-box;}
+    </style>
       
    </head>
    <body>
@@ -276,7 +303,7 @@
                   <!--================================-->
                   <div class="pageheader pd-y-25">
                      <div class="pd-t-5 pd-b-5">
-                        <h1 class="pd-0 mg-0 tx-20 text-overflow">Received Messages</h1>
+                        <h1 class="pd-0 mg-0 tx-20 text-overflow">Pending Reservations</h1>
                      </div>
                      <div class="breadcrumb pd-0 mg-0">
                         <a class="breadcrumb-item" href="index.html"><i class="icon ion-ios-home-outline"></i> Home</a>
@@ -289,40 +316,62 @@
                   <!-- Count Card Start -->
                   <!--================================-->
                   <div class="row clearfix">
+                   <div class="table-data">
+                           <div class="list-title">
+                    <h2>Pending Reservations</h2>
+                             
+                               </div>
+                   
+                       <table border="1">
+                   
+                           <tr>
+                   
+                               <th>S.N</th>
+                               <th>Full Name</th>
+                               <th>Email Address</th>
+                               <th>City</th>
+                               <th>Country</th>
+                               <th>Edit</th>
+                               <th>Delete</th>
+                   
+                   
+                           </tr>
+                           
+                   <?php
+                   
+                           if(count($fetchData)>0){
+                           $sn=1;
+                           foreach($fetchData as $data){
+                               
+                   ?> 
+                   <tr>
+                   <td><?php echo $sn; ?></td>
+                   <td><?php echo $data['full_name']; ?></td>
+                   <td><?php echo $data['email_address']; </td>
+                   <td><?php echo $data['city']; ?></td>
+                   <td><?php echo $data['country']; ?></td>
+                   <td><a href="update-form.php?edit=<?php echo $data['id']; ?>">Edit</a></td>
+                   <td><a href="delete-script.php?delete=<?php echo $data['id']; ?>">Delete</a></td>
+                   </tr> <?php
+                   
+                         $sn++; }
+                   
+                         }else{
+                               
+                   ?>
+                   
+                         <tr>
+                           <td colspan="7">No Data Found</td>
+                         </tr>
+                                   
+                   
+                       }
+                   ?>
                     
-                  </div>
-                  <!--/ Statistic End -->	
-                  <div class="row clearfix">
-                     <div class="col-md-6 col-lg-12 col-xl-6">
-                        <!--================================-->
-                        <!-- Popular Products Start -->
+                       </table>
                        
-                        <!--/ Popular Products End -->
-                     </div>
-                     <div class="col-md-6 col-lg-12 col-xl-6">
-                        <!--================================-->
-                        <!-- Transaction History Start -->
-                       
-                        <!--/ Transaction History End -->
-                     </div>
                   </div>
-                  <div class="row clearfix">
-                     <div class="col-md-4 col-lg-12 col-xl-4">
-                        <!--================================-->
-                        <!-- Support Tickets Start -->
-                       
-                        <!--/ Support Tickets End -->
-                     </div>
-                     <!--================================-->
-                     <!-- Recent Activity Start -->
-                     <!--================================-->
-                    
-                     <!--/ Recent Activity End -->
-                     <!--================================-->
-                     <!-- Friends  List Start -->
-                    
-                     <!--/ Friends  List End -->
-                  </div>
+                  
                   <!--================================-->
                   <!-- Social Activity 2 Start -->
                   <!--================================-->

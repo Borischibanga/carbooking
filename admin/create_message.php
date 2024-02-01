@@ -50,8 +50,8 @@
                         <span>Contacts</span><span class="badge-warning ft-right">10+</span></a>
                         <ul class="sub-menu">
                            <li><a href="contacts.html">Inbox</a></li>
-                           <li><a href="view_mails.html">View Mail</a></li>
-                           <li><a href="create_message.php">Compose Mail</a></li>
+                           <li><a href="mailbox-message.html">View Mail</a></li>
+                           <li><a href="mailbox-compose.html">Compose Mail</a></li>
                         </ul>
                      </li>
    
@@ -59,9 +59,9 @@
                         <a href="javascript:void(0)"><i class="fa fa-pie-chart"></i>
                         <span>Reservations</span><i class="accordion-icon fa fa-angle-left"></i></a>
                         <ul class="sub-menu">
-                           <li><a href="pending_reservation.html">Pending Reservations</a></li>
-                           <li><a href="completed_reservations.html">Completed Reservations</a></li>
-                           <li><a href="canceled_reservation.html">Cancelled Reservations</a></li>
+                           <li><a href="chart-morris.html">Pending Reservations</a></li>
+                           <li><a href="chart-chartjs.html">Completed Reservations</a></li>
+                           <li><a href="chart-flot.html">Cancelled Reservations</a></li>
                         </ul>
                      </li>
                      <li class="menu-divider mg-y-20-force"></li>
@@ -112,7 +112,10 @@
             </div>
             <!--/ Sidebar Footer End -->
          </div>
-         
+         <!--/ Page Sidebar End -->
+         <!--================================-->
+         <!-- Page Content Start -->
+         <!--================================-->
          <div class="page-content">
             <!--================================-->
             <!-- Page Header Start -->
@@ -273,12 +276,12 @@
                   <!--================================-->
                   <div class="pageheader pd-y-25">
                      <div class="pd-t-5 pd-b-5">
-                        <h1 class="pd-0 mg-0 tx-20 text-overflow">Received Messages</h1>
+                        <h1 class="pd-0 mg-0 tx-20 text-overflow">Pending Reservations</h1>
                      </div>
                      <div class="breadcrumb pd-0 mg-0">
                         <a class="breadcrumb-item" href="index.html"><i class="icon ion-ios-home-outline"></i> Home</a>
                         <a class="breadcrumb-item" href="javascript:void(0)">Dashboard</a>
-                        <span class="breadcrumb-item active">Dashboard v.1</span>
+                       
                      </div>
                   </div>
                   <!--/ Breadcrumb End -->
@@ -286,132 +289,7 @@
                   <!-- Count Card Start -->
                   <!--================================-->
                   <div class="row clearfix">
-                     <div class="col-xl-3 col-md-6">
-                        <div class="card bg-teal mb-4 shadow-1">
-                           <div class="card-body card-img">
-                              <div class="card-icon">
-                                 <i class="ion-ios-analytics float-right"></i>
-                              </div>
-                              <div class="text-white">
-                                 <h6 class="mb-0 text-uppercase tx-13">Orders</h6>
-                                 <h4 class="mg-b-40">587</h4>
-                                 <span class="badge badge-warning ft-right mg-r-10"> +31% </span> <span>From previous period</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-3 col-md-6">
-                        <div class="card bg-danger mb-4 shadow-1">
-                           <div class="card-body card-img">
-                              <div class="card-icon">
-                                 <i class="ion-ios-basketball-outline float-right"></i>
-                              </div>
-                              <div class="text-white">
-                                 <h6 class="mb-0 text-uppercase tx-13">Revenue</h6>
-                                 <h4 class="mg-b-40">$4,746</h4>
-                                 <span class="badge badge-info ft-right mg-r-10"> -15% </span> <span>From previous period</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-3 col-md-6">
-                        <div class="card bg-primary mb-4 shadow-1">
-                           <div class="card-body card-img">
-                              <div class="card-icon">
-                                 <i class="ion-ios-lightbulb-outline float-right"></i>
-                              </div>
-                              <div class="text-white">
-                                 <h6 class="mb-0 text-uppercase tx-13">Average Price</h6>
-                                 <h4 class="mg-b-40">$24.4</h4>
-                                 <span class="badge badge-warning ft-right mg-r-10"> 10% </span> <span>From previous period</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-3 col-md-6">
-                        <div class="card bg-info mb-4 shadow-1">
-                           <div class="card-body card-img">
-                              <div class="card-icon">
-                                 <i class="ion-ios-pie-outline float-right"></i>
-                              </div>
-                              <div class="text-white">
-                                 <h6 class="mb-0 text-uppercase tx-13">Product Sold</h6>
-                                 <h4 class="mg-b-40">$2,390</h4>
-                                 <span class="badge badge-danger ft-right mg-r-10"> +67% </span> <span>From previous period</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!--/ Count Card End -->
-                  <!--================================-->
-                  <!-- Statistic Start -->
-                  <!--================================-->						
-                  <div class="row no-gutters d-block clearfix">
-                     <div class="card mg-t-5 mg-b-30 shadow-1">
-                        <div class="card-header with-elements">
-                           <h4 class="card-header-title">
-                              Statistics
-                           </h4>
-                           <div class="card-header-btn">
-                              <a  href="javascript:void(0)" data-toggle="collapse" class="btn btn-info" data-target="#collapse1" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
-                              <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i class="ion-android-refresh"></i></a>
-                              <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i class="ion-android-expand"></i></a>
-                              <a href="javascript:void(0)" data-toggle="remove" class="btn btn-danger"><i class="ion-ios-trash-outline"></i></a>
-                           </div>
-                        </div>
-                        <div class="row no-gutters row-bordered collapse show" id="collapse1">
-                           <div class="col-md-3">
-                              <div class="card-body">
-                                 <div class="row mg-t-20">
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Total sales</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">20,332</span>
-                                       <sup class="text-success">+15%</sup>
-                                    </div>
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Income amount</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">$10,534</span>
-                                       <sup class="text-danger">-24%</sup>
-                                    </div>
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Total Visitors</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">100,534</span>
-                                       <sup class="text-success">+16%</sup>
-                                    </div>
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Page views</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">21,332</span>
-                                       <sup class="text-danger">-12%</sup>
-                                    </div>
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Total budgets</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">$15,534</span>
-                                       <sup class="text-success">+11%</sup>
-                                    </div>
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Total Projects</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">210</span>
-                                       <sup class="text-danger">-15%</sup>
-                                    </div>
-                                    <div class="col-6 col-xl-6 text-muted mb-3">Completed task</div>
-                                    <div class="col-6 col-xl-6 mb-3">
-                                       <span class="text-big">251</span>
-                                       <sup class="text-success">+12%</sup>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-9">
-                              <div class="card-body">
-                                 <div class="clearfix">
-                                    <div id="area-legend" class="text-center"></div>
-                                    <div id="area2" style="height:250px"></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                    
                   </div>
                   <!--/ Statistic End -->	
                   <div class="row clearfix">
@@ -571,7 +449,7 @@
          			showMethod: 'slideDown',
          			timeOut: 5000
          		};
-         		toastr.info('We provide best transportation', 'Hi, Travels and Towers');
+         		toastr.info('Multipurpose Admin Template', 'Hi, welcome to Adminify');
          
          	}, 300);
          
